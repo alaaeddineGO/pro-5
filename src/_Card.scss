@@ -1,0 +1,80 @@
+$clr-green:#3d8168;
+@mixin poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+  }
+
+.Card{
+    width: 580px;
+    min-height: 280px;
+    background-color: #fff;
+    border-radius: 20px;
+    @include fc;
+    @include poppins-extralight;
+    .left-side{
+        width: 58%;
+        height: 100%;
+    img{
+        border-radius: 20px;
+        width: 101%;
+        transform: translateY(3px);
+    }
+    }
+    .right-side{
+        width: 50%;
+        height: 100%;
+        padding: 15px;
+        h3{
+            margin: 10px;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        h2{
+            margin: 10px;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        p{
+            margin: 10px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        div{
+            margin: 10px;
+            @include fc;
+            justify-content: space-around;
+            span:nth-child(1){
+                font-size: 24px;
+                color: $clr-green;
+                font-weight: 800;
+            }
+        }
+        button{
+            width: 90%;
+            padding: 5px 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: $clr-green;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width:451px) {
+    .Card{
+        width: 90%;
+        margin: 80px auto;
+        flex-direction: column;
+        .left-side{
+            width: 100%;
+        }
+        .right-side{
+            width: 100%;
+            div{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

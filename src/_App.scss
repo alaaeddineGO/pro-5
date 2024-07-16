@@ -1,0 +1,12 @@
+@import 'mixins';
+.App{
+    height: 100vh;
+    transform: translateY(3px);
+    @include fcc;
+    background-color: #f3eae3;
+}
+@media (max-width:451px) {
+    .App{
+        height: 150vh;
+    }
+}
